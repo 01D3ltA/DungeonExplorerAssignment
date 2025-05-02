@@ -197,7 +197,7 @@ namespace DungeonExplorer
             }
 
 
-            private void FightMonsters(Player player, Inventory inventory)
+            internal void FightMonsters(Player player, Inventory inventory)
             {
                 while (currentRoom.Monsters.Count > 0)
                 {
@@ -274,7 +274,7 @@ namespace DungeonExplorer
                 }
             }
 
-            private void Move()
+            internal void Move()
             {
                 Console.WriteLine("Which direction would you like to go?");
                 string direction = Console.ReadLine();
@@ -290,7 +290,7 @@ namespace DungeonExplorer
                 }
             }
 
-            private void SearchForItems(Inventory inventory)
+            internal void SearchForItems(Inventory inventory)
             {
                 // Check if the current room has already been searched
                 if (currentRoom.HasBeenSearched)
