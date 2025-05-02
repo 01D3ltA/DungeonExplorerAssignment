@@ -12,8 +12,16 @@ namespace DungeonExplorer
         {
             try
             {
-                Game game = new Game(); // creates a game object and then runs the game
-                game.Start();   
+                DungeonExplorer.Game game = new DungeonExplorer.Game(); // creates a game object
+
+                // Create a Player and Inventory object
+                Console.WriteLine("Enter your name Hero:");
+                string playerName = Console.ReadLine();
+                Player player = new Player(playerName, 25, 10, 1, 0); // Removed redundant namespace
+                Inventory inventory = new Inventory(); // Removed redundant namespace
+
+                // Pass the Player and Inventory objects to the Start method
+                game.Start(player, inventory);
             }
             catch (Exception ex) // error check, if an exception is thrown, a message is displayed
             {
