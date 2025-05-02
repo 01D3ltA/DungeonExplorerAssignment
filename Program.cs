@@ -12,6 +12,7 @@ namespace DungeonExplorer
         {
             try
             {
+                GameTest.RunTests(); // Run the tests
                 DungeonExplorer.Game game = new DungeonExplorer.Game(); // creates a game object
 
                 // Create a Player and Inventory object
