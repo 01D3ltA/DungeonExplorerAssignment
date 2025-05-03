@@ -6,6 +6,7 @@ namespace DungeonExplorer
 {
     public class Room
     {
+        /// Properties of the Room class 
         public string Name { get; set; }
         public string Description { get; set; }
         public Dictionary<string, Room> Neighbors { get; set; }
@@ -16,6 +17,7 @@ namespace DungeonExplorer
 
         public Room(string name, string description, int x, int y)
         {
+            // Initialize properties 
             Name = name;
             Description = description;
             X = x;
@@ -27,12 +29,12 @@ namespace DungeonExplorer
 
         public void AddNeighbor(string direction, Room neighbor)
         {
-            Neighbors[direction] = neighbor;
+            Neighbors[direction] = neighbor; // Add a neighbor in the specified direction
         }
 
         public void AddMonster(Monster monster)
         {
-            Monsters.Add(monster);
+            Monsters.Add(monster); // Add a monster to the room
         }
     }
 

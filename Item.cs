@@ -40,7 +40,7 @@ namespace DungeonExplorer
 
         public override void Use()
         {
-            Console.WriteLine($"You equip the {Name}, ready to deal {Damage} damage.");
+            Console.WriteLine($"You equip the {Name}, ready to deal {Damage} damage."); 
         }
     }
     // Consumable class derived from Item

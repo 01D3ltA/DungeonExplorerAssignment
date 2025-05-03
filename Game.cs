@@ -85,7 +85,7 @@ namespace DungeonExplorer
                 }
             }
             
-            private string GetOppositeDirection(string direction)
+            private string GetOppositeDirection(string direction) // Method to get the opposite direction
             {
                 switch (direction)
                 {
@@ -144,7 +144,7 @@ namespace DungeonExplorer
                         Console.WriteLine("6. Fight the monsters");
                     }
 
-                    string choice = Console.ReadLine();
+                    string choice = Console.ReadLine(); // Read user input
                     switch (choice)
                     {
                         case "1":
@@ -187,7 +187,7 @@ namespace DungeonExplorer
                 }
             }
 
-            private void ShowPlayerInfo(Player player)
+            private void ShowPlayerInfo(Player player) // Method to display player information
             {
                 Console.WriteLine($"Player Name: {player.Name}");
                 Console.WriteLine($"Health: {player.GetHealth()}");
@@ -197,7 +197,8 @@ namespace DungeonExplorer
             }
 
 
-            internal void FightMonsters(Player player, Inventory inventory)
+            /// This creates a combat loop to handle combat with monsters which continues till the player or monster is dead or the player runs away
+            internal void FightMonsters(Player player, Inventory inventory) 
             {
                 while (currentRoom.Monsters.Count > 0)
                 {
@@ -274,7 +275,8 @@ namespace DungeonExplorer
                 }
             }
 
-            internal void Move()
+            // Method to move the player to a neighboring room
+            internal void Move() 
             {
                 Console.WriteLine("Which direction would you like to go?");
                 string direction = Console.ReadLine();

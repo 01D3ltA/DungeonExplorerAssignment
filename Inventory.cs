@@ -33,9 +33,9 @@ namespace DungeonExplorer
                 Console.WriteLine($"You added the {item.Name} to your inventory. Current weight: {currentWeight}/{MaxWeight}.");
                 return true;
             }
-
-            public void RemoveItem(Item item)
-            {
+            
+            public void RemoveItem(Item item) // Method to remove an item from the inventory
+        {
                 if (items.Remove(item))
                 {
                     currentWeight -= item.Weight;
@@ -47,8 +47,8 @@ namespace DungeonExplorer
                 }
             }
 
-            public void DisplayInventory()
-            {
+            public void DisplayInventory() // Method to display the inventory
+        {
                 Console.WriteLine("Your inventory contains:");
                 foreach (var item in items)
                 {
@@ -56,8 +56,8 @@ namespace DungeonExplorer
                 }
                 Console.WriteLine($"Total weight: {currentWeight}/{MaxWeight}");
             }
-            public void UseItem(string itemName)
-            {
+            public void UseItem(string itemName) // Method to use an item
+        {
                 var item = items.FirstOrDefault(i => i.Name.Equals(itemName, StringComparison.OrdinalIgnoreCase));
                 if (item != null)
                 {
@@ -69,9 +69,9 @@ namespace DungeonExplorer
                     Console.WriteLine($"You do not have a {itemName} in your inventory.");
                 }
             }
-            public Item GetItemByName(string itemName)
-            {
-                return items.FirstOrDefault(item => item.Name.Equals(itemName, StringComparison.OrdinalIgnoreCase));
+            public Item GetItemByName(string itemName) // Method to get an item by name
+        {
+                return items.FirstOrDefault(item => item.Name.Equals(itemName, StringComparison.OrdinalIgnoreCase)); 
             }
 
     }
